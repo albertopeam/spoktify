@@ -6,6 +6,8 @@ import com.github.albertopeam.domain.Playlist
 import com.github.albertopeam.domain.Result
 import com.github.albertopeam.domain.Track
 import com.github.albertopeam.usecases.BrowseRepository
+import com.github.albertopeam.usecases.exceptions.DataException
+import retrofit2.HttpException
 import java.lang.Exception
 import java.util.*
 
@@ -26,6 +28,8 @@ internal class BrowseRepositoryImplementation(private val service: BrowseService
                 }
                 .filterNotNull()
             return Result.Success(Featured(message = response.message, playlist = playlist))
+        } catch (e: HttpException) {
+            return Result.Error(DataException(code = e.code(), message = e.message()))
         } catch (e: Exception) {
             return Result.Error(e)
         }

@@ -1,6 +1,7 @@
 package com.github.albertopeam.spoktify.ui.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,8 +28,11 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java) //TODO: fix
         viewModel.locale = ConfigurationCompat.getLocales(resources.configuration)[0] //TODO: inject
+        viewModel.unauthorized = {
+            Log.d("MainFragment", "Unauthorized") //TODO: open activity. new intent
+        }
         binding.viewmodel = viewModel
     }
 }

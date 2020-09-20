@@ -8,9 +8,10 @@ import java.util.*
 
 class BrowseFactory {
     companion object {
-        fun make(locale: Locale): BrowseRepository {
+        //TODO: inject here the function to start activity
+        fun make(locale: Locale, unauthorized: ((Unit) -> Unit)): BrowseRepository {
             val url = Constants.url
-            val browseService = ServiceBuilder(url).build(BrowseService::class.java)
+            val browseService = ServiceBuilder(url, unauthorized).build(BrowseService::class.java)
             return BrowseRepositoryImplementation(browseService, locale)
         }
     }
