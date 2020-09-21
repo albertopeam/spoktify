@@ -4,14 +4,12 @@ import com.github.albertopeam.data.service.BrowseService
 import com.github.albertopeam.domain.Featured
 import com.github.albertopeam.domain.Playlist
 import com.github.albertopeam.domain.Result
-import com.github.albertopeam.domain.Track
 import com.github.albertopeam.usecases.BrowseRepository
 import com.github.albertopeam.usecases.exceptions.DataException
 import retrofit2.HttpException
-import java.lang.Exception
 import java.util.*
 
-internal class BrowseRepositoryImplementation(private val service: BrowseService, private val locale: Locale): BrowseRepository {
+internal class BrowseRepositoryImplementation(private val service: BrowseService, locale: Locale): BrowseRepository {
     private val country = locale.country
     private val language = locale.language + "_" + locale.country
 
@@ -33,16 +31,10 @@ internal class BrowseRepositoryImplementation(private val service: BrowseService
         } catch (e: Exception) {
             return Result.Error(e)
         }
-
-    //https://medium.com/@harmittaa/retrofit-2-6-0-with-koin-and-coroutines-network-error-handling-a5b98b5e5ca0
-        /*can not fail???
-        usar corutina en el viewMOdel y printear como funciona...
-        de paso ver si haces throws que pasa y eso, pq aquí no hay result failed.... y es raro
-        val  featured = Featured()
-        return Result(featured, null)*/
     }
 }
 
+//TODO: spotify api
 //https://developer.spotify.com/documentation/web-api/reference/browse/get-list-categories/
 //https://developer.spotify.com/console/get-featured-playlists/?country=ES&locale=es_ES&timestamp=2020-09-12T15%3A00%3A00&limit=50&offset=0
 //https://developer.spotify.com/console/get-new-releases/?country=SE

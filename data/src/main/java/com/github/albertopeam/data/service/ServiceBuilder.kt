@@ -1,17 +1,17 @@
 package com.github.albertopeam.data.service
 
-import com.github.albertopeam.data.service.interceptor.UnauthorizedInterceptor
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-internal class ServiceBuilder(private val baseUrl: String, private val unauthorized: ((Unit) -> Unit)) {
+internal class ServiceBuilder(baseUrl: String, unauthorizedInterceptor: Interceptor) {
     private val loggingInterceptor = HttpLoggingInterceptor()
         .setLevel(HttpLoggingInterceptor.Level.BODY)
     private val httpClient = OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
-        .addInterceptor(UnauthorizedInterceptor(unauthorized))
+        .addInterceptor(unauthorizedInterceptor)
         .build()
     private val builder = Retrofit.Builder()
         .baseUrl(baseUrl)
