@@ -10,6 +10,8 @@ import com.github.albertopeam.usecases.BrowseRepository
 import com.github.albertopeam.usecases.exceptions.DataException
 import kotlinx.coroutines.Dispatchers
 
+//TODO: inject asisted
+//https://developer.android.com/training/dependency-injection/hilt-jetpack
 class MainViewModel @ViewModelInject constructor(private val browseRepository: BrowseRepository): ViewModel() {
     val loading: MutableLiveData<Boolean> = MutableLiveData()
     val status: LiveData<String> = liveData(Dispatchers.IO) {

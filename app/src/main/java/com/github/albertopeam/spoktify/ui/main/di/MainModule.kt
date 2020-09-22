@@ -25,9 +25,3 @@ object MainModule {
         return BrowseFactory.make(locale, unauthorizedChallenge)
     }
 }
-
-/* TODO:
-mirar de meter las lib y lo de los módulos hacerlo al acabar con el /app
-lib viewmodel hilt -> ant leiva
-modulos con hilt?
- */
