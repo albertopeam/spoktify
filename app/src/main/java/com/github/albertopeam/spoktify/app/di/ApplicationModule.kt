@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.core.os.ConfigurationCompat
 import com.github.albertopeam.spoktify.app.initializers.Initializable
 import com.github.albertopeam.spoktify.app.initializers.AndroidInitializer
+import com.github.albertopeam.usecases.auth.AuthenticationRepository
+import com.github.albertopeam.usecases.auth.AuthenticationRepositoryImplementation
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -28,5 +30,12 @@ object SpoktifyModule {
     @Singleton
     fun provideInitializers(): List<Initializable> {
         return listOf(AndroidInitializer())
+    }
+
+    @Provides
+    @Singleton
+    fun provideAuthRepository(): AuthenticationRepository {
+        //TODO: migrate to multi module
+        return AuthenticationRepositoryImplementation()
     }
 }
