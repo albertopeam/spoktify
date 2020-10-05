@@ -4,7 +4,7 @@ import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.github.albertopeam.domain.Result
-import com.github.albertopeam.usecases.BrowseRepository
+import com.github.albertopeam.usecases.browse.BrowseRepository
 import com.github.albertopeam.usecases.exceptions.DataException
 import kotlinx.coroutines.Dispatchers
 

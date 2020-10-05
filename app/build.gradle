@@ -18,8 +18,17 @@ android {
     }
 
     buildTypes {
-        debug {}
+        debug {
+            def clientId = System.getenv("SPOKTIFY_CLIENT_ID")
+            buildConfigField 'String', 'SPOKTIFY_CLIENT_ID', "\"$clientId\""
+            def redirectUri = System.getenv("SPOKTIFY_REDIRECT_URI")
+            buildConfigField 'String', 'SPOKTIFY_REDIRECT_URI', "\"$redirectUri\""
+        }
         release {
+            def clientId = System.getenv("SPOKTIFY_CLIENT_ID")
+            buildConfigField 'String', 'SPOKTIFY_CLIENT_ID', "\"$clientId\""
+            def redirectUri = System.getenv("SPOKTIFY_REDIRECT_URI")
+            buildConfigField 'String', 'SPOKTIFY_REDIRECT_URI', "\"$redirectUri\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

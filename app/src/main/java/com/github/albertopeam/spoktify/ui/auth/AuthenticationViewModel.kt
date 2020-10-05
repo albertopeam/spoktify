@@ -13,4 +13,13 @@ class AuthenticationViewModel @ViewModelInject constructor(@Assisted private val
     val authURL: LiveData<String> = liveData {
         emit(authenticationRepository.authenticationUrl)
     }
+
+    fun containsAccessToken(callbackUrl: String?): Boolean {
+        var valid = false
+        callbackUrl?.let {
+            valid = authenticationRepository.storeIfContainsAccessToken(it)
+        }
+        return valid
+    }
 }
+

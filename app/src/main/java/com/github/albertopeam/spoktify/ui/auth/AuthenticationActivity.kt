@@ -1,19 +1,21 @@
 package com.github.albertopeam.spoktify.ui.auth
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
-import android.webkit.*
+import android.webkit.WebResourceError
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.viewModels
+import com.github.albertopeam.spoktify.MainActivity
 import com.github.albertopeam.spoktify.R
 import com.github.albertopeam.spoktify.databinding.AuthenticationActivityBinding
-import com.github.albertopeam.spoktify.databinding.MainFragmentBinding
-import com.github.albertopeam.spoktify.ui.main.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class AuthenticationActivity: AppCompatActivity() {
@@ -21,6 +23,7 @@ class AuthenticationActivity: AppCompatActivity() {
     private val viewModel: AuthenticationViewModel by viewModels()
     private lateinit var binding: AuthenticationActivityBinding
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.authentication_activity)
@@ -43,6 +46,24 @@ class AuthenticationActivity: AppCompatActivity() {
             ) {
                 binding.progressBar.visibility = View.GONE
             }
+
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                request: WebResourceRequest?
+            ): Boolean {
+                return if (viewModel.containsAccessToken(request?.url.toString())) {
+                    navigateToMain()
+                    true
+                } else {
+                    super.shouldOverrideUrlLoading(view, request)
+                }
+            }
         }
+    }
+
+    private fun navigateToMain() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 }

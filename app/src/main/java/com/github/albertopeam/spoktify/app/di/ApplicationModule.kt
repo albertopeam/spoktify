@@ -1,11 +1,12 @@
 package com.github.albertopeam.spoktify.app.di
 
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
 import androidx.core.os.ConfigurationCompat
-import com.github.albertopeam.spoktify.app.initializers.Initializable
+import com.github.albertopeam.data.auth.AuthenticationDataSourceImplementation
 import com.github.albertopeam.spoktify.app.initializers.AndroidInitializer
-import com.github.albertopeam.usecases.auth.AuthenticationRepository
-import com.github.albertopeam.usecases.auth.AuthenticationRepositoryImplementation
+import com.github.albertopeam.spoktify.app.initializers.Initializable
+import com.github.albertopeam.usecases.auth.AuthenticationDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,9 +15,6 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.*
 import javax.inject.Singleton
 
-
-//TODO: hilt multi module
-// https://developer.android.com/training/dependency-injection/hilt-multi-module
 @InstallIn(ApplicationComponent::class)
 @Module
 object SpoktifyModule {
@@ -34,8 +32,7 @@ object SpoktifyModule {
 
     @Provides
     @Singleton
-    fun provideAuthRepository(): AuthenticationRepository {
-        //TODO: migrate to multi module
-        return AuthenticationRepositoryImplementation()
+    fun provideAuthenticationDataSource(@ApplicationContext appContext: Context): AuthenticationDataSource {
+        return AuthenticationDataSourceImplementation(appContext.getSharedPreferences("auth", MODE_PRIVATE))
     }
 }

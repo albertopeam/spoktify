@@ -3,7 +3,7 @@ package com.github.albertopeam.data.model
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-internal class TracksResponse {
+class TracksResponse {
     @SerializedName("href")
     @Expose
     var href: String? = null

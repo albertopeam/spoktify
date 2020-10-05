@@ -13,5 +13,4 @@ internal class UnauthorizedInterceptor(private val unauthorizedChallenge: Unauth
         }
         return response
     }
-
 }
