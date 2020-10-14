@@ -18,3 +18,4 @@ class BrowseRepositoryImplementation(private val dataSource: BrowseDataSource, l
 //https://developer.spotify.com/documentation/web-api/reference/browse/get-list-categories/
 //https://developer.spotify.com/console/get-featured-playlists/?country=ES&locale=es_ES&timestamp=2020-09-12T15%3A00%3A00&limit=50&offset=0
 //https://developer.spotify.com/console/get-new-releases/?country=SE
+//https://developer.spotify.com/console/get-current-user-top-artists-and-tracks/?type=artists&time_range=short_term&limit=&offset=0

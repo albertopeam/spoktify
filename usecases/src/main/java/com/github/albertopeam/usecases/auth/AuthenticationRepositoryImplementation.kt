@@ -13,7 +13,7 @@ class AuthenticationRepositoryImplementation(
     override val authenticationUrl: String
         get() {
             val responseType = "token"
-            val scopes = "user-read-email" + "%20"+ "user-read-private"
+            val scopes = arrayOf("user-read-email", "user-read-private", "user-top-read").joinToString(separator = "%20")
             return "https://accounts.spotify.com/authorize?client_id=$clientId&response_type=$responseType&redirect_uri=$redirectUri&scope=$scopes"
         }
     override val accessToken: String = dataSource.get()
