@@ -17,9 +17,11 @@ class SpoktifyApp: Application() {
     }
 }
 
+//TODO: more horizontal stuff
+//TODO: clicable to go to tracks
+//TODO: player
 //TODO: try to use dagger only and make internal the stuff like models in data or implementations otherwise make no sense to build modules
 //TODO: mockwebserver for data
 //TODO: mockito
-//TODO: leak canary
 //TODO: mainViewModel hide Mutable via inmutable
 //TODO: unit test viewModel, check threading
