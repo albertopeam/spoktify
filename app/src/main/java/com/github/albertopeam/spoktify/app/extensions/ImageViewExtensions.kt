@@ -18,3 +18,17 @@ fun ImageView.imageUrl(imageUrl: String?){
             .into(this)
     }
 }
+
+@BindingAdapter("circleImageUrl")
+fun ImageView.circleImageUrl(imageUrl: String?){
+    imageUrl?.let {
+        Glide.with(context)
+            .load(it)
+            .circleCrop()
+            .apply(
+                RequestOptions()
+                    .placeholder(R.drawable.ic_disc_player)
+                    .error(R.drawable.ic_error_red))
+            .into(this)
+    }
+}

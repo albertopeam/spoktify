@@ -1,4 +1,4 @@
-package com.github.albertopeam.domain
+package com.github.albertopeam.domain.models
 
 import java.util.*
 

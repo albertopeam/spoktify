@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.github.albertopeam.spoktify.ui.items.model.PlaylistItemViewModel" />
+            type="com.github.albertopeam.spoktify.ui.items.model.ArtistItemViewModel" />
     </data>
 
     <LinearLayout
@@ -18,19 +18,20 @@
         android:layout_marginBottom="10dp">
 
         <ImageView
-            android:id="@+id/item_playlist_image_id"
+            android:id="@+id/item_artist_image_id"
             android:layout_width="175dp"
             android:layout_height="175dp"
-            app:imageUrl="@{ viewModel.imageUrl }" />
+            app:circleImageUrl="@{ viewModel.imageUrl }" />
 
         <TextView
-            android:id="@+id/item_playlist_title_id"
+            android:id="@+id/item_artist_title_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text='@{ viewModel.title }' />
+            android:text='@{ viewModel.name }'
+            android:textAlignment="center"/>
 
     </LinearLayout>
 </layout>

@@ -1,4 +1,4 @@
-package com.github.albertopeam.domain
+package com.github.albertopeam.domain.models
 
 data class Playlist(val id: String,
                     val name: String,

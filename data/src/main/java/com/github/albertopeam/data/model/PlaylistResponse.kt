@@ -1,6 +1,5 @@
 package com.github.albertopeam.data.model
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class PlaylistResponse(@SerializedName("href")  val href: String? = null,

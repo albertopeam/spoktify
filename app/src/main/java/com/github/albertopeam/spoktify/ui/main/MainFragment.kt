@@ -1,6 +1,5 @@
 package com.github.albertopeam.spoktify.ui.main
 
-import android.graphics.Movie
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,13 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.github.albertopeam.domain.Playlist
 import com.github.albertopeam.spoktify.databinding.MainFragmentBinding
-import com.github.albertopeam.spoktify.ui.items.ItemsAdapter
-import com.github.albertopeam.spoktify.ui.items.PlaylistItemViewModel
+import com.github.albertopeam.spoktify.ui.items.SectionsRecyclerViewAdapter
 import dagger.hilt.android.AndroidEntryPoint
-
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
@@ -39,7 +34,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModel = viewModel
-        binding.recyclerView.layoutManager = LinearLayoutManager(activity)
-        binding.recyclerView.adapter = ItemsAdapter()
+        binding.recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        binding.recyclerView.adapter = SectionsRecyclerViewAdapter()
     }
 }

@@ -1,6 +1,6 @@
-package com.github.albertopeam.spoktify.ui.items
+package com.github.albertopeam.spoktify.ui.items.model
 
-import com.github.albertopeam.domain.Playlist
+import com.github.albertopeam.domain.models.Playlist
 
 data class PlaylistItemViewModel(private val playlist: Playlist) {
     val title: String = playlist.name

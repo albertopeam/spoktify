@@ -2,7 +2,9 @@ package com.github.albertopeam.spoktify.ui.main.di
 
 import android.content.Context
 import com.github.albertopeam.data.browse.BrowseDataSourceImplementation
+import com.github.albertopeam.data.personalization.PersonalizationDataSourceImplementation
 import com.github.albertopeam.data.service.BrowseService
+import com.github.albertopeam.data.service.PersonalizationService
 import com.github.albertopeam.data.service.ServiceBuilder
 import com.github.albertopeam.spoktify.app.Constants
 import com.github.albertopeam.spoktify.app.auth.UnauthorizedChallengeImplementation
@@ -11,6 +13,9 @@ import com.github.albertopeam.usecases.browse.BrowseRepository
 import com.github.albertopeam.usecases.auth.UnauthorizedChallenge
 import com.github.albertopeam.usecases.browse.BrowseDataSource
 import com.github.albertopeam.usecases.browse.BrowseRepositoryImplementation
+import com.github.albertopeam.usecases.personalization.PersonalizationDataSource
+import com.github.albertopeam.usecases.personalization.PersonalizationRepository
+import com.github.albertopeam.usecases.personalization.PersonalizationRepositoryImplementation
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -39,5 +44,20 @@ object MainModule {
     @Provides
     fun provideBrowseRepository(browseDataSource: BrowseDataSource, locale: Locale): BrowseRepository {
         return BrowseRepositoryImplementation(browseDataSource, locale)
+    }
+
+    @Provides
+    fun providePersonalizationService(unauthorizedChallenge: UnauthorizedChallenge, authenticationDataSource: AuthenticationDataSource): PersonalizationService {
+        return ServiceBuilder(Constants.url, unauthorizedChallenge, authenticationDataSource).build(PersonalizationService::class.java)
+    }
+
+    @Provides
+    fun providePersonalizationDataSource(personalizationService: PersonalizationService): PersonalizationDataSource {
+        return PersonalizationDataSourceImplementation(personalizationService)
+    }
+
+    @Provides
+    fun providePersonalizationRepository(personalizationDataSource: PersonalizationDataSource): PersonalizationRepository {
+        return PersonalizationRepositoryImplementation(personalizationDataSource)
     }
 }
