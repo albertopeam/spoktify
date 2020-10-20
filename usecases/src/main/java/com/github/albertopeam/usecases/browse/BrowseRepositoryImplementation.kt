@@ -2,7 +2,9 @@ package com.github.albertopeam.usecases.browse
 
 import com.github.albertopeam.domain.models.FeaturedPlaylists
 import com.github.albertopeam.domain.Result
+import com.github.albertopeam.domain.getOrThrow
 import com.github.albertopeam.domain.models.Category
+import java.lang.Exception
 import java.util.*
 
 class BrowseRepositoryImplementation(private val dataSource: BrowseDataSource, locale: Locale):
@@ -15,12 +17,13 @@ class BrowseRepositoryImplementation(private val dataSource: BrowseDataSource, l
     }
 
     override suspend fun categories(): Result<List<Category>> {
-        return dataSource.categories(country, language)
+        val result = dataSource.categories(country, language)
+        return try {
+            val categories = result.getOrThrow()
+            val sorted = categories.sortedBy {  it.name }
+            Result.Success(sorted)
+        } catch (e: Exception) {
+            result
+        }
     }
 }
-
-//TODO: spotify api
-//https://developer.spotify.com/documentation/web-api/reference/browse/get-list-categories/
-//https://developer.spotify.com/console/get-featured-playlists/?country=ES&locale=es_ES&timestamp=2020-09-12T15%3A00%3A00&limit=50&offset=0
-//https://developer.spotify.com/console/get-new-releases/?country=SE
-//https://developer.spotify.com/console/get-current-user-top-artists-and-tracks/?type=artists&time_range=short_term&limit=&offset=0
