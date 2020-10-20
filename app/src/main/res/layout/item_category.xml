@@ -6,12 +6,12 @@
     <data>
         <variable
             name="viewModel"
-            type="com.github.albertopeam.spoktify.ui.items.model.ArtistItemViewModel" />
+            type="com.github.albertopeam.spoktify.ui.items.model.CategoryItemViewModel" />
     </data>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:layout_width="175dp"
+        android:layout_height="175dp"
         android:orientation="vertical"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
@@ -19,21 +19,23 @@
         android:layout_marginBottom="10dp">
 
         <ImageView
-            android:id="@+id/item_artist_image_id"
-            android:layout_width="175dp"
-            android:layout_height="175dp"
-            app:circleImageUrl="@{ viewModel.imageUrl }" />
+            android:id="@+id/item_category_image_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:imageUrl="@{ viewModel.imageUrl }" />
 
         <TextView
             android:id="@+id/item_artist_title_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:ellipsize="end"
-            android:maxLines="2"
+            android:maxLines="1"
+            android:textColor="@color/white"
             android:text='@{ viewModel.name }'
-            tools:text="Demo text, put here your stuff"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:layout_alignBottom="@id/item_category_image_id"
+            android:layout_marginBottom="2dp"
+            tools:text="Demo text, put here your stuff"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 </layout>

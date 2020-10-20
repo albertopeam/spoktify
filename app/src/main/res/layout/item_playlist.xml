@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -30,7 +31,8 @@
             android:layout_marginTop="2dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text='@{ viewModel.title }' />
+            android:text='@{ viewModel.title }'
+            tools:text="Demo text, put here your stuff. nice job putting your stuff"/>
 
     </LinearLayout>
 </layout>

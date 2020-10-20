@@ -2,6 +2,7 @@ package com.github.albertopeam.usecases.browse
 
 import com.github.albertopeam.domain.models.FeaturedPlaylists
 import com.github.albertopeam.domain.Result
+import com.github.albertopeam.domain.models.Category
 import java.util.*
 
 class BrowseRepositoryImplementation(private val dataSource: BrowseDataSource, locale: Locale):
@@ -11,6 +12,10 @@ class BrowseRepositoryImplementation(private val dataSource: BrowseDataSource, l
 
     override suspend fun featured(): Result<FeaturedPlaylists> {
         return dataSource.featured(country, language)
+    }
+
+    override suspend fun categories(): Result<List<Category>> {
+        return dataSource.categories(country, language)
     }
 }
 
