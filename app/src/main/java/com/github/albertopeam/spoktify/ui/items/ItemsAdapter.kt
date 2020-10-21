@@ -1,5 +1,7 @@
 package com.github.albertopeam.spoktify.ui.items
 
+import androidx.navigation.findNavController
+import com.github.albertopeam.spoktify.R
 import com.github.albertopeam.spoktify.databinding.ItemArtistBinding
 import com.github.albertopeam.spoktify.databinding.ItemCategoryBinding
 import com.github.albertopeam.spoktify.databinding.ItemPlaylistBinding
@@ -20,6 +22,7 @@ class ItemsAdapter: ListDelegationAdapter<List<Any>>() {
         }
         val artistDelegate = adapterDelegateViewBinding<ArtistItemViewModel, Any, ItemArtistBinding>(
             { layoutInflater, root ->  ItemArtistBinding.inflate(layoutInflater, root, false) }) {
+            binding.root.setOnClickListener { it.findNavController().navigate(R.id.action_mainFragment_to_artistTracksFragment) }
             bind {
                 binding.viewModel = item
                 binding.executePendingBindings()
