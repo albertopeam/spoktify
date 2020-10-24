@@ -3,8 +3,8 @@ package com.github.albertopeam.spoktify.ui.main.di
 import android.content.Context
 import com.github.albertopeam.data.browse.BrowseDataSourceImplementation
 import com.github.albertopeam.data.personalization.PersonalizationDataSourceImplementation
-import com.github.albertopeam.data.service.BrowseService
-import com.github.albertopeam.data.service.PersonalizationService
+import com.github.albertopeam.data.browse.BrowseService
+import com.github.albertopeam.data.personalization.PersonalizationService
 import com.github.albertopeam.data.service.ServiceBuilder
 import com.github.albertopeam.spoktify.app.Constants
 import com.github.albertopeam.spoktify.app.auth.UnauthorizedChallengeImplementation
@@ -33,7 +33,8 @@ object MainModule {
 
     @Provides
     fun provideBrowseService(unauthorizedChallenge: UnauthorizedChallenge, authenticationDataSource: AuthenticationDataSource): BrowseService {
-        return ServiceBuilder(Constants.url, unauthorizedChallenge, authenticationDataSource).build(BrowseService::class.java)
+        return ServiceBuilder(Constants.url, unauthorizedChallenge, authenticationDataSource).build(
+            BrowseService::class.java)
     }
 
     @Provides
@@ -48,7 +49,8 @@ object MainModule {
 
     @Provides
     fun providePersonalizationService(unauthorizedChallenge: UnauthorizedChallenge, authenticationDataSource: AuthenticationDataSource): PersonalizationService {
-        return ServiceBuilder(Constants.url, unauthorizedChallenge, authenticationDataSource).build(PersonalizationService::class.java)
+        return ServiceBuilder(Constants.url, unauthorizedChallenge, authenticationDataSource).build(
+            PersonalizationService::class.java)
     }
 
     @Provides

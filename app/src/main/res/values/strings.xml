@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Spoktify</string>
+    <string name="albums">Albums</string>
+    <string name="top">Top</string>
+    <string name="related">Related</string>
 </resources>

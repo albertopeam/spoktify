@@ -18,7 +18,7 @@ class MainViewModel @ViewModelInject constructor(private val browseRepository: B
                                                  private val personalizationRepository: PersonalizationRepository,
                                                  @Assisted private val savedStateHandle: SavedStateHandle): ViewModel() {
     val loading: MutableLiveData<Boolean> = MutableLiveData()
-    val error: MutableLiveData<String> = MutableLiveData()
+    val error: MutableLiveData<String> = MutableLiveData() //TODO: snack or error in view
     val sections: LiveData<List<Section>> = liveData(Dispatchers.IO) {
         coroutineScope {
             loading.postValue(true)

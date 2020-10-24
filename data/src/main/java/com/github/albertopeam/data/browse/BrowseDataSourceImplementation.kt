@@ -1,6 +1,5 @@
 package com.github.albertopeam.data.browse
 
-import com.github.albertopeam.data.service.BrowseService
 import com.github.albertopeam.domain.models.FeaturedPlaylists
 import com.github.albertopeam.domain.models.Playlist
 import com.github.albertopeam.domain.Result

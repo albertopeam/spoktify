@@ -5,9 +5,13 @@ import com.github.albertopeam.spoktify.R
 import com.github.albertopeam.spoktify.databinding.ItemArtistBinding
 import com.github.albertopeam.spoktify.databinding.ItemCategoryBinding
 import com.github.albertopeam.spoktify.databinding.ItemPlaylistBinding
+import com.github.albertopeam.spoktify.ui.artist.ArtistFragment
+import com.github.albertopeam.spoktify.ui.artist.ArtistFragmentArgs
+//import com.github.albertopeam.spoktify.ui.artist.ArtistFragmentArgs
 import com.github.albertopeam.spoktify.ui.items.model.ArtistItemViewModel
 import com.github.albertopeam.spoktify.ui.items.model.CategoryItemViewModel
 import com.github.albertopeam.spoktify.ui.items.model.PlaylistItemViewModel
+import com.github.albertopeam.spoktify.ui.main.MainFragmentDirections
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
@@ -22,9 +26,9 @@ class ItemsAdapter: ListDelegationAdapter<List<Any>>() {
         }
         val artistDelegate = adapterDelegateViewBinding<ArtistItemViewModel, Any, ItemArtistBinding>(
             { layoutInflater, root ->  ItemArtistBinding.inflate(layoutInflater, root, false) }) {
-            binding.root.setOnClickListener { it.findNavController().navigate(R.id.action_mainFragment_to_artistTracksFragment) }
             bind {
                 binding.viewModel = item
+                binding.root.setOnClickListener { it.findNavController().navigate(MainFragmentDirections.actionToArtistFragment(item.id)) }
                 binding.executePendingBindings()
             }
         }

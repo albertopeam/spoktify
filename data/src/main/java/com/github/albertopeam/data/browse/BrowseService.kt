@@ -1,4 +1,4 @@
-package com.github.albertopeam.data.service
+package com.github.albertopeam.data.browse
 
 import com.github.albertopeam.data.model.CategoriesResponse
 import com.github.albertopeam.data.model.FeaturedResponse

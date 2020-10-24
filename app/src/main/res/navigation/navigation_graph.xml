@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
     app:startDestination="@id/mainFragment">
 
@@ -9,14 +10,16 @@
         android:name="com.github.albertopeam.spoktify.ui.main.MainFragment"
         android:label="MainFragment" >
         <action
-            app:enterAnim="@anim/fragment_open_enter"
-            app:exitAnim="@anim/fragment_open_exit"
-            android:id="@+id/action_mainFragment_to_artistTracksFragment"
-            app:destination="@id/artistTracksFragment" />
+            android:id="@+id/action_to_artistFragment"
+            app:destination="@id/artistFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/artistTracksFragment"
-        android:name="com.github.albertopeam.spoktify.ui.artist.tracks.ArtistTracksFragment"
-        android:label="TracksFragment" />
+        android:id="@+id/artistFragment"
+        android:name="com.github.albertopeam.spoktify.ui.artist.ArtistFragment"
+        android:label="ArtistFragment">
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
 </navigation>

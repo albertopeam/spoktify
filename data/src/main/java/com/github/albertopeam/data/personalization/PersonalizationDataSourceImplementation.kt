@@ -1,6 +1,5 @@
 package com.github.albertopeam.data.personalization
 
-import com.github.albertopeam.data.service.PersonalizationService
 import com.github.albertopeam.domain.models.Artist
 import com.github.albertopeam.domain.Result
 import com.github.albertopeam.usecases.exceptions.DataException

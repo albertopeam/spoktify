@@ -18,7 +18,8 @@ class SpoktifyApp: Application() {
     }
 }
 
-//TODO: navigation
+//TODO: navigation, custom transition PUSH + MODAL
+//TODO: snkack or error in views
 //TODO: clicable to go to tracks, https://developer.android.com/guide/navigation/navigation-migrate#integrate
 //TODO: player
 //TODO: try to use dagger only and make internal the stuff like models in data or implementations otherwise make no sense to build modules

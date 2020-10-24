@@ -54,7 +54,7 @@ android {
 dependencies {
     def androidx = "2.2.0"
     def hilt_view_model = "1.0.0-alpha02"
-    def nav_version = "2.3.0"
+    def nav_version = "2.3.1"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //kt
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -83,6 +83,7 @@ dependencies {
     //leak canary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
     //navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"

@@ -1,4 +1,4 @@
-package com.github.albertopeam.data.service
+package com.github.albertopeam.data.personalization
 
 import com.github.albertopeam.data.model.FeaturedResponse
 import com.github.albertopeam.data.model.TopArtistsResponse

@@ -14,4 +14,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SegmentedControlButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/txt_segmented</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+    
+    <style name="SegmentedControlButtonLeft" parent="SegmentedControlButton">
+        <item name="android:background">@drawable/btn_segmented_left</item>
+    </style>
+
+    <style name="SegmentedControlButtonCenter" parent="SegmentedControlButton">
+        <item name="android:background">@drawable/btn_segmented_center</item>
+    </style>
+
+    <style name="SegmentedControlButtonRight" parent="SegmentedControlButton">
+        <item name="android:background">@drawable/btn_segmented_right</item>
+    </style>
+
 </resources>
