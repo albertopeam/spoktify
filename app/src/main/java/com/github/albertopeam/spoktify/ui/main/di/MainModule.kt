@@ -18,16 +18,13 @@ import com.github.albertopeam.usecases.personalization.PersonalizationRepository
 import com.github.albertopeam.usecases.personalization.PersonalizationRepositoryImplementation
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
-import dagger.hilt.android.qualifiers.ActivityContext
 import java.util.*
 
-@InstallIn(ActivityComponent::class)
+//@InstallIn(ActivityComponent::class)
 @Module
 object MainModule {
     @Provides
-    fun provideUnauthorizedChallenge(@ActivityContext context: Context): UnauthorizedChallenge {
+    fun provideUnauthorizedChallenge(/*@ActivityContext*/ context: Context): UnauthorizedChallenge {
         return UnauthorizedChallengeImplementation(context)
     }
 

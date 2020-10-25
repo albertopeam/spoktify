@@ -15,9 +15,7 @@ import androidx.databinding.DataBindingUtil
 import com.github.albertopeam.spoktify.MainActivity
 import com.github.albertopeam.spoktify.R
 import com.github.albertopeam.spoktify.databinding.AuthenticationActivityBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class AuthenticationActivity: AppCompatActivity() {
 
     private val viewModel: AuthenticationViewModel by viewModels()

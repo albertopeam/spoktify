@@ -9,9 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.github.albertopeam.spoktify.databinding.ArtistFragmentBinding
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class ArtistFragment: Fragment() {
 
     private lateinit var binding: ArtistFragmentBinding

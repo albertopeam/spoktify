@@ -9,9 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.albertopeam.spoktify.databinding.MainFragmentBinding
 import com.github.albertopeam.spoktify.ui.items.SectionsRecyclerViewAdapter
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainFragment : Fragment() {
     private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: MainFragmentBinding

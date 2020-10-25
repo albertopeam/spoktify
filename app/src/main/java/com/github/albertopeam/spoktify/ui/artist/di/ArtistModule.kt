@@ -11,10 +11,8 @@ import com.github.albertopeam.usecases.auth.AuthenticationDataSource
 import com.github.albertopeam.usecases.auth.UnauthorizedChallenge
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 
-@InstallIn(ActivityComponent::class)
+//@InstallIn(ActivityComponent::class)
 @Module
 object ArtistModule {
     @Provides

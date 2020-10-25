@@ -2,7 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'dagger.hilt.android.plugin'
+//di hilt
+//apply plugin: 'dagger.hilt.android.plugin'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
@@ -54,6 +55,7 @@ android {
 dependencies {
     def androidx = "2.2.0"
     def hilt_view_model = "1.0.0-alpha02"
+    def dagger = "2.29.1"
     def nav_version = "2.3.1"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //kt
@@ -69,11 +71,14 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$androidx"
     //binding
     kapt "com.android.databinding:compiler:3.1.4"
-    //di
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_view_model"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-    kapt "androidx.hilt:hilt-compiler:$hilt_view_model"
+    //di hilt
+    //implementation "com.google.dagger:hilt-android:$hilt_version"
+    //implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_view_model"
+    //kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+    //kapt "androidx.hilt:hilt-compiler:$hilt_view_model"
+    //di dagger
+    implementation "com.google.dagger:dagger:$dagger"
+    kapt "com.google.dagger:dagger-compiler:$dagger"
     //adapter delegates
     implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl:4.3.0'
     implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:4.3.0'

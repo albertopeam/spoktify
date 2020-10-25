@@ -6,10 +6,8 @@ import com.github.albertopeam.usecases.auth.AuthenticationRepository
 import com.github.albertopeam.usecases.auth.AuthenticationRepositoryImplementation
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 
-@InstallIn(ActivityComponent::class)
+//@InstallIn(ActivityComponent::class)
 @Module
 object AuthenticationModule {
     @Provides

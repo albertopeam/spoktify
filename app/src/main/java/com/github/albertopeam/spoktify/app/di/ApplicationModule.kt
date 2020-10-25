@@ -9,18 +9,15 @@ import com.github.albertopeam.spoktify.app.initializers.Initializable
 import com.github.albertopeam.usecases.auth.AuthenticationDataSource
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
-import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.*
 import javax.inject.Singleton
 
-@InstallIn(ApplicationComponent::class)
+//@InstallIn(ApplicationComponent::class)
 @Module
 object SpoktifyModule {
     @Provides
     @Singleton
-    fun provideLocale(@ApplicationContext appContext: Context): Locale {
+    fun provideLocale(/*@ApplicationContext */appContext: Context): Locale {
         return ConfigurationCompat.getLocales(appContext.resources.configuration)[0]
     }
 
@@ -32,7 +29,7 @@ object SpoktifyModule {
 
     @Provides
     @Singleton
-    fun provideAuthenticationDataSource(@ApplicationContext appContext: Context): AuthenticationDataSource {
+    fun provideAuthenticationDataSource(/*@ApplicationContext */appContext: Context): AuthenticationDataSource {
         return AuthenticationDataSourceImplementation(appContext.getSharedPreferences("auth", MODE_PRIVATE))
     }
 }
