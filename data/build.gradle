@@ -30,6 +30,9 @@ android {
         jvmTarget = "1.8"
     }
 
+    sourceSets {
+        test.resources.srcDirs += 'src/test/resources'
+    }
 }
 
 dependencies {
@@ -41,7 +44,11 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+    //testing
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.0'
+    //mockito
+    testImplementation 'org.mockito:mockito-core:3.5.15'
+    //mockwebserver
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.9.0")
 }
-
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"

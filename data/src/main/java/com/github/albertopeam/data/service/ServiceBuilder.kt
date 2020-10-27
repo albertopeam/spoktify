@@ -9,23 +9,27 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ServiceBuilder(baseUrl: String, unauthorizedChallenge: UnauthorizedChallenge, authenticationDataSource: AuthenticationDataSource) {
-    private val loggingInterceptor = HttpLoggingInterceptor()
-        .setLevel(HttpLoggingInterceptor.Level.BODY)
-    private val unauthorizedInterceptor = UnauthorizedInterceptor(unauthorizedChallenge)
-    private val accessTokenInterceptor = AccessTokenInterceptor(authenticationDataSource)
-    private val httpClient = OkHttpClient.Builder()
-        .addInterceptor(unauthorizedInterceptor)
-        .addInterceptor(accessTokenInterceptor)
-        .addInterceptor(loggingInterceptor)
-        .build()
-    private val builder = Retrofit.Builder()
-        .baseUrl(baseUrl)
-        .client(httpClient)
-        .addConverterFactory(GsonConverterFactory.create())
-    private val retrofit = builder.build()
-
+class ServiceBuilder(private val baseUrl: String,
+                     private val unauthorizedChallenge: UnauthorizedChallenge,
+                     private val authenticationDataSource: AuthenticationDataSource,
+                     private val useLoginInterceptor: Boolean = true) {
     fun <S> build(serviceClass: Class<S>): S {
+        val loggingInterceptor = HttpLoggingInterceptor()
+            .setLevel(HttpLoggingInterceptor.Level.BODY)
+        val unauthorizedInterceptor = UnauthorizedInterceptor(unauthorizedChallenge)
+        val accessTokenInterceptor = AccessTokenInterceptor(authenticationDataSource)
+        val okHttpBuilder = OkHttpClient.Builder()
+        okHttpBuilder
+            .addInterceptor(unauthorizedInterceptor)
+            .addInterceptor(accessTokenInterceptor)
+        if (useLoginInterceptor) {
+            okHttpBuilder.addInterceptor(loggingInterceptor)
+        }
+        val builder = Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .client(okHttpBuilder.build())
+            .addConverterFactory(GsonConverterFactory.create())
+        val retrofit = builder.build()
         return retrofit.create(serviceClass)
     }
 }
