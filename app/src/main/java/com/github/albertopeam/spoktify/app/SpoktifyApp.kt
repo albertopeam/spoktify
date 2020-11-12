@@ -18,10 +18,12 @@ class SpoktifyApp: Application() {
     }
 }
 
-//TODO: unit test viewModel, check threading
+//TODO: integration testing: https://developer.android.com/training/testing/fundamentals#write-tests
 //TODO: espresso+dagger
-//TODO: navigation, custom transition PUSH + MODAL
 //TODO: snkack or error in views
+//TODO: refresh? or similar
+//TODO: shared cypher
+//TODO: navigation, custom transition PUSH + MODAL
 //TODO: clicable to go to tracks, https://developer.android.com/guide/navigation/navigation-migrate#integrate
 //TODO: player
 //TODO: try to use dagger only and make internal the stuff like models in data or implementations otherwise make no sense to build modules

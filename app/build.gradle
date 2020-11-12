@@ -61,7 +61,7 @@ dependencies {
     //androidx
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.3'
     implementation "androidx.fragment:fragment-ktx:1.2.5"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation "androidx.lifecycle:lifecycle-extensions:$androidx"
@@ -93,8 +93,21 @@ dependencies {
     implementation project(path: ':domain')
     //testing
     testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation 'androidx.test:core:1.3.0'
+    testImplementation 'androidx.test:runner:1.3.0'
+    testImplementation 'androidx.test:rules:1.3.0'
+    testImplementation 'androidx.test.ext:junit:1.1.2'
+    //test instant executor rule
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    //test dispatchers main
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.0'
+    //test mockito
+    testImplementation 'org.mockito:mockito-core:3.6.0'
+    //test final
+    testImplementation 'org.mockito:mockito-inline:3.6.0'
+    //android testing
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //navigation testing
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 

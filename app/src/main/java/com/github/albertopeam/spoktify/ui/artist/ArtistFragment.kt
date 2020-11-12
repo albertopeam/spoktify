@@ -1,6 +1,5 @@
 package com.github.albertopeam.spoktify.ui.artist
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,11 +17,6 @@ class ArtistFragment: Fragment() {
     private val viewModel: ArtistViewModel by viewModels()
     private val args: ArtistFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel.id = args.id
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,5 +26,10 @@ class ArtistFragment: Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.loadArtist(withId = args.id)
     }
 }

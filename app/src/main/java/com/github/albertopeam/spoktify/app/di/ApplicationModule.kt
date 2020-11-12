@@ -33,6 +33,11 @@ object SpoktifyModule {
     @Provides
     @Singleton
     fun provideAuthenticationDataSource(@ApplicationContext appContext: Context): AuthenticationDataSource {
-        return AuthenticationDataSourceImplementation(appContext.getSharedPreferences("auth", MODE_PRIVATE))
+        return AuthenticationDataSourceImplementation(
+            appContext.getSharedPreferences(
+                "auth",
+                MODE_PRIVATE
+            )
+        )
     }
 }

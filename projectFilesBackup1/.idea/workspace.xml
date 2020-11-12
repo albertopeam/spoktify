@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="spoktify" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c6272a9-de09-43fc-8b20-c3a151d600be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/models/Resource.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/util/LiveDataExtensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/util/MockitoExtensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/util/TestCoroutineRule.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/app/SpoktifyApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/app/SpoktifyApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/data/build.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/data">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="cleanup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="install" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Spoktify" type="f1a62948:ProjectNode" />
+                <item name="data" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Kotlin File" />
+        <option value="navigationResourceFile" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin Interface" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hNagMBcNi5nWaeBiM5UCdYhV5R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="LAYOUT" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.github.albertopeam.spoktify.ui.artist" />
+      <recent name="com.github.albertopeam.spoktify.ui" />
+      <recent name="com.github.albertopeam.data" />
+      <recent name="com.github.albertopeam.data.artists" />
+      <recent name="com.github.albertopeam.data.personalization" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/src" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.github.albertopeam.spoktify.app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/src/test/resources" />
+      <recent name="$PROJECT_DIR$/data/src/test/resource" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/tracks" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android JUnit.ArtistViewModelTests.given artists repository will answer artist when get artist item view model then resource success">
+    <configuration name="ArtistViewModelTests.given artists repository will answer artist when get artist item view model then report it" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spoktify.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.albertopeam.spoktify.ui.artist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.albertopeam.spoktify.ui.artist" />
+      <option name="MAIN_CLASS_NAME" value="com.github.albertopeam.spoktify.ui.artist.ArtistViewModelTests" />
+      <option name="METHOD_NAME" value="given artists repository will answer artist when get artist item view model then report it" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArtistViewModelTests.given artists repository will answer artist when get artist item view model then resource success" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spoktify.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.albertopeam.spoktify.ui.artist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.albertopeam.spoktify.ui.artist" />
+      <option name="MAIN_CLASS_NAME" value="com.github.albertopeam.spoktify.ui.artist.ArtistViewModelTests" />
+      <option name="METHOD_NAME" value="given artists repository will answer artist when get artist item view model then resource success" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArtistViewModelTests.given artists repository will answer error when get artist item view model then resource error" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spoktify.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.albertopeam.spoktify.ui.artist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.albertopeam.spoktify.ui.artist" />
+      <option name="MAIN_CLASS_NAME" value="com.github.albertopeam.spoktify.ui.artist.ArtistViewModelTests" />
+      <option name="METHOD_NAME" value="given artists repository will answer error when get artist item view model then resource error" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="Spoktify.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArtistViewModelTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spoktify.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.albertopeam.spoktify.ui.artist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.albertopeam.spoktify.ui.artist" />
+      <option name="MAIN_CLASS_NAME" value="com.github.albertopeam.spoktify.ui.artist.ArtistViewModelTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArtistViewModelTests.given artists repository not answer when get artist item view model then resource is loading" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Spoktify.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.albertopeam.spoktify.ui.artist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.albertopeam.spoktify.ui.artist" />
+      <option name="MAIN_CLASS_NAME" value="com.github.albertopeam.spoktify.ui.artist.ArtistViewModelTests" />
+      <option name="METHOD_NAME" value="given artists repository not answer when get artist item view model then resource is loading" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.ArtistViewModelTests.given artists repository will answer artist when get artist item view model then resource success" />
+        <item itemvalue="Android JUnit.ArtistViewModelTests.given artists repository will answer error when get artist item view model then resource error" />
+        <item itemvalue="JUnit.ArtistViewModelTests" />
+        <item itemvalue="JUnit.ArtistViewModelTests.given artists repository not answer when get artist item view model then resource is loading" />
+        <item itemvalue="Android JUnit.ArtistViewModelTests.given artists repository will answer artist when get artist item view model then report it" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c6272a9-de09-43fc-8b20-c3a151d600be" name="Default Changelist" comment="" />
+      <created>1599854113505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599854113505</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="284" y="81" key="#ArtistViewModelTests.given_artists_repository_will_answer_artist_when_get_artist_item_view_model_then_report_it_(1)" timestamp="1604429377229">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="284" y="81" key="#ArtistViewModelTests.given_artists_repository_will_answer_artist_when_get_artist_item_view_model_then_report_it_(1)/0.23.1440.877@0.23.1440.877" timestamp="1604429377229" />
+    <state x="598" y="331" key="#Notifications" timestamp="1603220063476">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="598" y="331" key="#Notifications/0.23.1440.877@0.23.1440.877" timestamp="1603220063476" />
+    <state x="243" y="200" key="#PSD" timestamp="1603306314986">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="243" y="200" key="#PSD/0.23.1440.877@0.23.1440.877" timestamp="1603306314986" />
+    <state x="324" y="236" key="#PSD/0.23.1920.1057@0.23.1920.1057" timestamp="1601305178909" />
+    <state x="320" y="109" key="#Plugins" timestamp="1602972116361">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="109" key="#Plugins/0.23.1440.877@0.23.1440.877" timestamp="1602972116361" />
+    <state x="483" y="381" key="#com.google.gct.testrecorder.ui.TestClassNameInputDialog" timestamp="1603913579467">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="483" y="381" key="#com.google.gct.testrecorder.ui.TestClassNameInputDialog/0.23.1440.877@0.23.1440.877" timestamp="1603913579467" />
+    <state x="100" y="123" width="1240" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1604515400855">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877@0.23.1440.877" timestamp="1604515400855" />
+    <state x="497" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1604428939931">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="497" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1604428939931" />
+    <state x="663" y="217" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1601409934834" />
+    <state x="408" y="197" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602616636345">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="408" y="197" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1602616636345" />
+    <state x="161" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1603311498132">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="161" y="394" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1440.877@0.23.1440.877" timestamp="1603311498132" />
+    <state x="483" y="349" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1602616112116">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="483" y="349" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1440.877@0.23.1440.877" timestamp="1602616112116" />
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603312584633">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1603312584633" />
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601924053165">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="458" y="215" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877@0.23.1440.877" timestamp="1601924053165" />
+    <state x="483" y="132" width="549" height="658" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1604001799100">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="483" y="132" width="549" height="658" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1604001799100" />
+    <state x="644" y="154" width="549" height="658" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1601304814536" />
+    <state x="640" y="221" width="552" height="480" key="#xdebugger.XInspectDialog" timestamp="1601580217773">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="640" y="221" width="552" height="480" key="#xdebugger.XInspectDialog/0.23.1440.877@0.23.1440.877" timestamp="1601580217773" />
+    <state x="463" y="361" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1600597255573">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="463" y="361" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877@0.23.1440.877" timestamp="1600597255573" />
+    <state x="100" y="123" width="1240" height="677" key="AVDManager" timestamp="1603307453187">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="AVDManager/0.23.1440.877@0.23.1440.877" timestamp="1603307453187" />
+    <state x="308" y="223" key="AndroidCreateResourceFileDialog" timestamp="1603308161053">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="308" y="223" key="AndroidCreateResourceFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1603308161053" />
+    <state x="411" y="264" key="AndroidCreateResourceFileDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1601048528462" />
+    <state x="816" y="324" key="AndroidProcessChooserDialog" timestamp="1601015527531">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="816" y="324" key="AndroidProcessChooserDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1601015527531" />
+    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog" timestamp="1604084954885">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1604084954885" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom" timestamp="1604519432573">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604519432573" />
+    <state width="1398" height="303" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339824" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center" timestamp="1604519432573">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604519432573" />
+    <state width="1398" height="303" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339824" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left" timestamp="1604519432572">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604519432572" />
+    <state width="1398" height="303" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339823" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right" timestamp="1604519432573">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604519432573" />
+    <state width="1398" height="303" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339824" />
+    <state width="1398" height="389" key="GridCell.Tab.1.bottom" timestamp="1604519408498">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="389" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604519408498" />
+    <state width="1398" height="389" key="GridCell.Tab.1.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339816" />
+    <state width="1398" height="389" key="GridCell.Tab.1.center" timestamp="1604519408497">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="389" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1604519408497" />
+    <state width="1398" height="389" key="GridCell.Tab.1.center/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339816" />
+    <state width="1398" height="389" key="GridCell.Tab.1.left" timestamp="1604519408497">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="389" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1604519408497" />
+    <state width="1398" height="389" key="GridCell.Tab.1.left/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339815" />
+    <state width="1398" height="389" key="GridCell.Tab.1.right" timestamp="1604519408497">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="389" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1604519408497" />
+    <state width="1398" height="389" key="GridCell.Tab.1.right/0.23.1920.1057@0.23.1920.1057" timestamp="1604475339816" />
+    <state x="0" y="23" width="1440" height="877" key="SettingsEditor" timestamp="1603220098904">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="23" width="1440" height="877" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1603220098904" />
+    <state width="720" height="438" key="XDebugger.FullValuePopup" timestamp="1600974571551">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="720" height="438" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1600974571551" />
+    <state x="497" y="246" key="chooseDestDirectoryDialog" timestamp="1603569764859">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="497" y="246" key="chooseDestDirectoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1603569764859" />
+    <state x="133" y="144" width="1654" height="816" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1600159589251">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1440.877@0.23.1440.877" timestamp="1599860620059" />
+    <state x="133" y="144" width="1654" height="816" key="com.android.tools.idea.avdmanager.AvdListDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1600159589251" />
+    <state x="390" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1602885410229">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="390" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1602885410229" />
+    <state x="390" y="474" key="com.intellij.ide.util.TipDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1601878069388" />
+    <state x="372" y="218" width="1011" height="518" key="find.popup" timestamp="1604177324232">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="372" y="218" width="1011" height="518" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604177324232" />
+    <state x="496" y="258" width="997" height="586" key="find.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1601410301177" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1603747544940">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1440.877@0.23.1440.877" timestamp="1603747544940" />
+    <state x="404" y="114" key="psd.add.module.dependency.panel.dimension" timestamp="1600112346530">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="404" y="114" key="psd.add.module.dependency.panel.dimension/0.23.1440.877@0.23.1440.877" timestamp="1600112346530" />
+    <state x="385" y="211" key="run.anything.popup" timestamp="1603045823223">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="211" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1603045823223" />
+    <state x="513" y="250" key="run.anything.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1601046104673" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1604514845664">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1604514845664" />
+    <state x="513" y="252" width="894" height="815" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1601016058715" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/data/ui/main/MainViewModel.kt</url>
+          <line>34</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/data/ui/main/MainViewModel.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/data/ui/main/MainViewModel.kt</url>
+          <line>28</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/data/ui/main/MainViewModel.kt</url>
+          <line>31</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/data/app/extensions/RecyclerViewExtensions.kt</url>
+          <line>11</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/androidTest/java/com/github/albertopeam/data/AuthenticationDataSourceImplementationTests.kt</url>
+          <line>53</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>24</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt</url>
+          <line>77</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt</url>
+          <line>75</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>34</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt</url>
+          <line>132</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt</url>
+          <line>122</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt</url>
+          <line>80</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/test/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModelTests.kt</url>
+          <line>81</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>32</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>31</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/github/albertopeam/spoktify/ui/artist/ArtistViewModel.kt</url>
+          <line>29</line>
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Spoktify$ArtistViewModelTests_given_artists_repository_will_answer_artist_when_get_artist_item_view_model_then_report_it.ic" NAME="ArtistViewModelTests.given artists repository will answer artist when get artist item view model then report it Coverage Results" MODIFIED="1604252850296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.albertopeam.spoktify.ui.artist.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Spoktify$ArtistViewModelTests_given_artists_repository_will_answer_error_when_get_artist_item_view_model_then_report_error.ic" NAME="ArtistViewModelTests.given artists repository will answer error when get artist item view model then report error Coverage Results" MODIFIED="1604252986310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.github.albertopeam.spoktify.ui.artist.*</FILTER>
+    </SUITE>
+  </component>
+</project>
