@@ -51,16 +51,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    app:values="@{ viewModel.types }">
                     <RadioButton
                         style="@style/SegmentedControlButtonLeft"
-                        android:text="@string/albums" />
+                        android:text="@string/albums"
+                        android:onClick="@{ () -> viewModel.selected(com.github.albertopeam.spoktify.ui.artist.ArtistViewModel.Type.ALBUMS) }"/>
                     <RadioButton
                         style="@style/SegmentedControlButtonCenter"
-                        android:text="@string/top" />
+                        android:text="@string/top"
+                        android:onClick="@{ () -> viewModel.selected(com.github.albertopeam.spoktify.ui.artist.ArtistViewModel.Type.TOP) }"/>
                     <RadioButton
                         style="@style/SegmentedControlButtonRight"
-                        android:text="@string/related" />
+                        android:text="@string/related"
+                        android:onClick="@{ () -> viewModel.selected(com.github.albertopeam.spoktify.ui.artist.ArtistViewModel.Type.RELATED) }"/>
                 </RadioGroup>
             </LinearLayout>
         </LinearLayout>

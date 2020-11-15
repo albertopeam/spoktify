@@ -15,11 +15,17 @@ class ArtistViewModel @ViewModelInject constructor(
     @Assisted private val savedStateHandle: SavedStateHandle): ViewModel() {
     private lateinit var id: String
     private val _loading = MutableLiveData<Boolean>()
-    val loading: LiveData<Boolean> = _loading
     private val _error = MutableLiveData<String>()
-    val error: LiveData<String> = _error
     private val _artistItemViewModel = MutableLiveData<ArtistItemViewModel>()
+    private val _types = MutableLiveData<List<Boolean>>()
+    val loading: LiveData<Boolean> = _loading
+    val error: LiveData<String> = _error
     val artistItemViewModel: LiveData<ArtistItemViewModel> = _artistItemViewModel
+    val types: LiveData<List<Boolean>> = _types
+
+    init {
+        _types.value = listOf(true, false, false)
+    }
 
     fun loadArtist(withId: String) {
         id = withId
@@ -34,6 +40,14 @@ class ArtistViewModel @ViewModelInject constructor(
                 _loading.postValue(false)
             }
         }
+    }
+
+    fun selected(type: Type) {
+        println(type.toString())
+    }
+
+    enum class Type {
+        ALBUMS, TOP, RELATED
     }
 }
 
