@@ -15,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.github.albertopeam.spoktify.HiltTestRunner"
     }
 
     buildTypes {
@@ -106,8 +106,15 @@ dependencies {
     //test final
     testImplementation 'org.mockito:mockito-inline:3.6.0'
     //android testing
+    androidTestImplementation 'org.mockito:mockito-core:3.6.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    debugImplementation('androidx.fragment:fragment-testing:1.2.5'){
+        exclude group: 'androidx.test', module: 'monitor'
+    }
+    //android hilt testing
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.28-alpha'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.29.1-alpha'
     //navigation testing
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
