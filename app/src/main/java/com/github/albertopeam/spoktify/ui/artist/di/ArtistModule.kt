@@ -35,9 +35,4 @@ object ArtistModule {
     fun provideArtistRepository(artistDataSource: ArtistDataSource): ArtistsRepository {
         return ArtistsRepositoryImplementation(artistDataSource)
     }
-
-    @Provides
-    fun provideCoroutineDispatcher(): CoroutineDispatcher {
-        return Dispatchers.IO
-    }
 }

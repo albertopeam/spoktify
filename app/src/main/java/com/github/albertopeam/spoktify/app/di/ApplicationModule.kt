@@ -12,6 +12,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import java.util.*
 import javax.inject.Singleton
 
@@ -39,5 +41,12 @@ object SpoktifyModule {
                 MODE_PRIVATE
             )
         )
+    }
+
+    @Provides
+    @Singleton
+    @DispatcherIO
+    fun provideCoroutineDispatcher(): CoroutineDispatcher {
+        return Dispatchers.IO
     }
 }

@@ -2,42 +2,66 @@ package com.github.albertopeam.spoktify.ui.artist
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.MediumTest
+import com.github.albertopeam.domain.models.Artist
 import com.github.albertopeam.spoktify.R
 import com.github.albertopeam.spoktify.launchFragmentInHiltContainer
+import com.github.albertopeam.spoktify.ui.artist.di.ArtistModule
 import com.github.albertopeam.usecases.artists.ArtistsRepository
+import com.github.albertopeam.domain.Result
+import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+import dagger.hilt.android.testing.UninstallModules
+import kotlinx.coroutines.runBlocking
+import org.hamcrest.CoreMatchers.not
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito.`when`
-import javax.inject.Inject
+import org.mockito.Mockito.mock
 
 @RunWith(AndroidJUnit4::class)
 @HiltAndroidTest
+@MediumTest
+@UninstallModules(ArtistModule::class)
 class ArtistFragmentTests {
-    //https://developer.android.com/training/dependency-injection/hilt-testing
-    //https://codelabs.developers.google.com/codelabs/android-hilt#9
-    //https://codelabs.developers.google.com/codelabs/android-hilt#9
 
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
-    //@Inject
-    //lateinit var repository: ArtistsRepository
+    @BindValue
+    lateinit var repository: ArtistsRepository
 
     @Before
     fun setUp() {
+        repository = mock(ArtistsRepository::class.java)
         hiltRule.inject()
-        val bundle = ArtistFragmentArgs("1").toBundle()
-        launchFragmentInHiltContainer<ArtistFragment>(bundle, R.style.AppTheme)
     }
 
     @Test
     fun loading() {
+        runBlocking { `when`(repository.artist("1")).then { Thread.sleep(1000) }  }
+
+        launchFragment()
+
         onView(withId(R.id.progressBar)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun success() {
+        runBlocking { `when`(repository.artist("1")).thenReturn(Result.Success(Artist(id = "1", "Miguel Migs", image = "url"))) }
+
+        launchFragment()
+
+        onView(withId(R.id.progressBar)).check(matches(not(isDisplayed())))
+        onView(withId(R.id.item_artist_title_id)).check(matches(withText("Miguel Migs")))
+    }
+
+    private fun launchFragment() {
+        val bundle = ArtistFragmentArgs("1").toBundle()
+        launchFragmentInHiltContainer<ArtistFragment>(bundle, R.style.AppTheme)
     }
 }

@@ -1,16 +1,18 @@
 package com.github.albertopeam.spoktify.ui.artist
 
+import android.util.Log
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.github.albertopeam.domain.getOrThrow
+import com.github.albertopeam.spoktify.app.di.DispatcherIO
 import com.github.albertopeam.spoktify.ui.items.model.ArtistItemViewModel
 import com.github.albertopeam.usecases.artists.ArtistsRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 
 class ArtistViewModel @ViewModelInject constructor(
-    private val dispatcher: CoroutineDispatcher,
+    @DispatcherIO private val dispatcher: CoroutineDispatcher,
     private val artistRepository: ArtistsRepository,
     @Assisted private val savedStateHandle: SavedStateHandle): ViewModel() {
     private lateinit var id: String
