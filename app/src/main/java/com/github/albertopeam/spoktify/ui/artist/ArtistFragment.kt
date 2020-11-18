@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.github.albertopeam.spoktify.databinding.ArtistFragmentBinding
+import com.github.albertopeam.spoktify.ui.models.EventObserver
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,6 +32,9 @@ class ArtistFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.error.observe(viewLifecycleOwner, EventObserver {
+            Snackbar.make(binding.constraintLayout, it, Snackbar.LENGTH_LONG).show()
+        })
         viewModel.loadArtist(withId = args.id)
     }
 }

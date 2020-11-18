@@ -7,6 +7,7 @@ import androidx.lifecycle.*
 import com.github.albertopeam.domain.getOrThrow
 import com.github.albertopeam.spoktify.app.di.DispatcherIO
 import com.github.albertopeam.spoktify.ui.items.model.ArtistItemViewModel
+import com.github.albertopeam.spoktify.ui.models.Event
 import com.github.albertopeam.usecases.artists.ArtistsRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
@@ -17,11 +18,11 @@ class ArtistViewModel @ViewModelInject constructor(
     @Assisted private val savedStateHandle: SavedStateHandle): ViewModel() {
     private lateinit var id: String
     private val _loading = MutableLiveData<Boolean>()
-    private val _error = MutableLiveData<String>()
+    private val _error = MutableLiveData<Event<String>>()
     private val _artistItemViewModel = MutableLiveData<ArtistItemViewModel>()
     private val _types = MutableLiveData<List<Boolean>>()
     val loading: LiveData<Boolean> = _loading
-    val error: LiveData<String> = _error
+    val error: LiveData<Event<String>> = _error
     val artistItemViewModel: LiveData<ArtistItemViewModel> = _artistItemViewModel
     val types: LiveData<List<Boolean>> = _types
 
@@ -37,7 +38,7 @@ class ArtistViewModel @ViewModelInject constructor(
                 val artist = artistRepository.artist(id).getOrThrow()
                 _artistItemViewModel.postValue(ArtistItemViewModel(artist))
             } catch (e: Exception) {
-                _error.postValue("Something went wrong")
+                _error.postValue(Event("Something went wrong"))
             } finally {
                 _loading.postValue(false)
             }

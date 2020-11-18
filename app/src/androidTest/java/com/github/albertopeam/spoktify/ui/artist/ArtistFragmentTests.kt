@@ -23,6 +23,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.mock
+import java.lang.Exception
 
 @RunWith(AndroidJUnit4::class)
 @HiltAndroidTest
@@ -47,6 +48,7 @@ class ArtistFragmentTests {
 
         launchFragment()
 
+        //TODO: selected first radio
         onView(withId(R.id.progressBar)).check(matches(isDisplayed()))
     }
 
@@ -58,6 +60,17 @@ class ArtistFragmentTests {
 
         onView(withId(R.id.progressBar)).check(matches(not(isDisplayed())))
         onView(withId(R.id.item_artist_title_id)).check(matches(withText("Miguel Migs")))
+    }
+
+    @Test
+    fun error() {
+        runBlocking { `when`(repository.artist("1")).thenReturn(Result.Error(Exception())) }
+
+        launchFragment()
+
+        onView(withId(R.id.progressBar)).check(matches(not(isDisplayed())))
+        onView(withId(R.id.item_artist_title_id)).check(matches(withText("")))
+        onView(withText("Something went wrong")).check(matches(isDisplayed()))
     }
 
     private fun launchFragment() {

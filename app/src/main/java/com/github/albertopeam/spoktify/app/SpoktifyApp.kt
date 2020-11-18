@@ -22,7 +22,6 @@ class SpoktifyApp: Application() {
 //TODO: espresso+dagger https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-survey#7
 //https://developer.android.com/training/basics/fragments/testing
 //https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-survey#7
-//TODO: snkack or error in views, https://medium.com/androiddevelopers/livedata-with-snackbar-navigation-and-other-events-the-singleliveevent-case-ac2622673150
 //TODO: refresh? or similar
 //TODO: shared cypher
 //TODO: navigation, custom transition PUSH + MODAL
