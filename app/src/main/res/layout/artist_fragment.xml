@@ -49,6 +49,7 @@
                     android:textSize="22sp"
                     tools:text="Demo text, put here your stuff" />
                 <RadioGroup
+                    android:id="@+id/radio_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -56,14 +57,17 @@
                     app:values="@{ viewModel.types }">
                     <RadioButton
                         style="@style/SegmentedControlButtonLeft"
+                        android:id="@+id/radio_artist"
                         android:text="@string/albums"
                         android:onClick="@{ () -> viewModel.selected(com.github.albertopeam.spoktify.ui.artist.ArtistViewModel.Type.ALBUMS) }"/>
                     <RadioButton
                         style="@style/SegmentedControlButtonCenter"
+                        android:id="@+id/radio_top"
                         android:text="@string/top"
                         android:onClick="@{ () -> viewModel.selected(com.github.albertopeam.spoktify.ui.artist.ArtistViewModel.Type.TOP) }"/>
                     <RadioButton
                         style="@style/SegmentedControlButtonRight"
+                        android:id="@+id/radio_related"
                         android:text="@string/related"
                         android:onClick="@{ () -> viewModel.selected(com.github.albertopeam.spoktify.ui.artist.ArtistViewModel.Type.RELATED) }"/>
                 </RadioGroup>

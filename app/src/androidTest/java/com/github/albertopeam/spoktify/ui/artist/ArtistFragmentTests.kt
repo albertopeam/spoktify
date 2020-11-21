@@ -43,12 +43,23 @@ class ArtistFragmentTests {
     }
 
     @Test
-    fun loading() {
-        runBlocking { `when`(repository.artist("1")).then { Thread.sleep(1000) }  }
+    fun defaults() {
+        runBlocking { `when`(repository.artist("1")).then { Thread.sleep(500) }  }
 
         launchFragment()
 
-        //TODO: selected first radio
+        onView(withId(R.id.radio_group)).check(matches(isDisplayed()))
+        onView(withId(R.id.radio_artist)).check(matches(isChecked()))
+        onView(withId(R.id.radio_top)).check(matches(not(isChecked())))
+        onView(withId(R.id.radio_related)).check(matches(not(isChecked())))
+    }
+
+    @Test
+    fun loading() {
+        runBlocking { `when`(repository.artist("1")).then { Thread.sleep(500) }  }
+
+        launchFragment()
+
         onView(withId(R.id.progressBar)).check(matches(isDisplayed()))
     }
 
