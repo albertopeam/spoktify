@@ -71,7 +71,7 @@ class ArtistViewModelTests {
 
         sut.loadArtist("1")
 
-        assertEquals(sut.error.getOrAwaitValue(), "Something went wrong")
+        assertEquals(sut.error.getOrAwaitValue().peekContent(), "Something went wrong")
         assertFalse(sut.loading.getOrAwaitValue())
     }
 }
