@@ -6,7 +6,7 @@ import androidx.core.os.ConfigurationCompat
 import com.github.albertopeam.data.auth.AuthenticationDataSourceImplementation
 import com.github.albertopeam.spoktify.app.initializers.AndroidInitializer
 import com.github.albertopeam.spoktify.app.initializers.Initializable
-import com.github.albertopeam.usecases.auth.AuthenticationDataSource
+import com.github.albertopeam.data.auth.AuthenticationDataSource
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

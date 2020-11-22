@@ -1,4 +1,4 @@
-package com.github.albertopeam.usecases.auth
+package com.github.albertopeam.data.auth
 
 interface AuthenticationDataSource {
     fun set(accessToken: String)

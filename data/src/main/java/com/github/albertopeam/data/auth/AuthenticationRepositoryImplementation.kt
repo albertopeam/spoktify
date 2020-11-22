@@ -1,5 +1,6 @@
-package com.github.albertopeam.usecases.auth
+package com.github.albertopeam.data.auth
 
+import com.github.albertopeam.usecases.auth.AuthenticationRepository
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 

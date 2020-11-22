@@ -2,7 +2,6 @@ package com.github.albertopeam.data.artists
 
 import com.github.albertopeam.domain.Result
 import com.github.albertopeam.domain.models.Artist
-import com.github.albertopeam.usecases.artists.ArtistDataSource
 import com.github.albertopeam.usecases.exceptions.DataException
 import retrofit2.HttpException
 

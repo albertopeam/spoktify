@@ -2,7 +2,7 @@ package com.github.albertopeam.data.service
 
 import com.github.albertopeam.data.interceptors.AccessTokenInterceptor
 import com.github.albertopeam.data.interceptors.UnauthorizedInterceptor
-import com.github.albertopeam.usecases.auth.AuthenticationDataSource
+import com.github.albertopeam.data.auth.AuthenticationDataSource
 import com.github.albertopeam.usecases.auth.UnauthorizedChallenge
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

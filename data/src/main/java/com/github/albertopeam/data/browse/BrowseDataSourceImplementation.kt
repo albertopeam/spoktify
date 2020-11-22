@@ -5,7 +5,6 @@ import com.github.albertopeam.domain.models.Playlist
 import com.github.albertopeam.domain.Result
 import com.github.albertopeam.domain.extensions.iso8601
 import com.github.albertopeam.domain.models.Category
-import com.github.albertopeam.usecases.browse.BrowseDataSource
 import com.github.albertopeam.usecases.exceptions.DataException
 import retrofit2.HttpException
 import java.util.*

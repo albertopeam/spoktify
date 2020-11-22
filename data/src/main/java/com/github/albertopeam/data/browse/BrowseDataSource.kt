@@ -1,4 +1,4 @@
-package com.github.albertopeam.usecases.browse
+package com.github.albertopeam.data.browse
 
 import com.github.albertopeam.domain.models.FeaturedPlaylists
 import com.github.albertopeam.domain.Result

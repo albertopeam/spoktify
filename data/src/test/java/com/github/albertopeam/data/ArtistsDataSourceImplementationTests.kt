@@ -6,7 +6,7 @@ import com.github.albertopeam.data.service.ServiceBuilder
 import com.github.albertopeam.data.utils.MockResponseFileReader
 import com.github.albertopeam.domain.getOrThrow
 import com.github.albertopeam.domain.models.Artist
-import com.github.albertopeam.usecases.auth.AuthenticationDataSource
+import com.github.albertopeam.data.auth.AuthenticationDataSource
 import com.github.albertopeam.usecases.auth.UnauthorizedChallenge
 import junit.framework.TestCase
 import kotlinx.coroutines.runBlocking

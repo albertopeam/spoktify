@@ -1,4 +1,4 @@
-package com.github.albertopeam.usecases.artists
+package com.github.albertopeam.data.artists
 
 import com.github.albertopeam.domain.Result
 import com.github.albertopeam.domain.models.Artist

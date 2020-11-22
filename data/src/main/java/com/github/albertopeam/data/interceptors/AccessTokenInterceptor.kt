@@ -1,6 +1,6 @@
 package com.github.albertopeam.data.interceptors
 
-import com.github.albertopeam.usecases.auth.AuthenticationDataSource
+import com.github.albertopeam.data.auth.AuthenticationDataSource
 import okhttp3.Interceptor
 import okhttp3.Response
 

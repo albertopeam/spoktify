@@ -1,9 +1,10 @@
-package com.github.albertopeam.usecases.browse
+package com.github.albertopeam.data.browse
 
 import com.github.albertopeam.domain.models.FeaturedPlaylists
 import com.github.albertopeam.domain.Result
 import com.github.albertopeam.domain.getOrThrow
 import com.github.albertopeam.domain.models.Category
+import com.github.albertopeam.usecases.browse.BrowseRepository
 import java.lang.Exception
 import java.util.*
 
