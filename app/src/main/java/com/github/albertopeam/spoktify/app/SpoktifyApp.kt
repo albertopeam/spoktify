@@ -18,14 +18,9 @@ class SpoktifyApp: Application() {
     }
 }
 
-//TODO: integration testing: https://developer.android.com/training/testing/fundamentals#write-tests
-//TODO: espresso+dagger https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-survey#7
-//https://developer.android.com/training/basics/fragments/testing
-//https://developer.android.com/codelabs/advanced-android-kotlin-training-testing-survey#7
 //TODO: refresh? or similar
 //TODO: shared cypher
 //TODO: navigation, custom transition PUSH + MODAL
 //TODO: clicable to go to tracks, https://developer.android.com/guide/navigation/navigation-migrate#integrate
 //TODO: player
 //TODO: try to use dagger only and make internal the stuff like models in data or implementations otherwise make no sense to build modules
-//TODO: mainViewModel hide Mutable via inmutable
