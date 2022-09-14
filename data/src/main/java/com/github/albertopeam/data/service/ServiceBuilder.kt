@@ -4,6 +4,7 @@ import com.github.albertopeam.data.interceptors.AccessTokenInterceptor
 import com.github.albertopeam.data.interceptors.UnauthorizedInterceptor
 import com.github.albertopeam.data.auth.AuthenticationDataSource
 import com.github.albertopeam.usecases.auth.UnauthorizedChallenge
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -14,6 +15,7 @@ class ServiceBuilder(private val baseUrl: String,
                      private val authenticationDataSource: AuthenticationDataSource,
                      private val useLoginInterceptor: Boolean = true) {
     fun <S> build(serviceClass: Class<S>): S {
+        val gson = GsonBuilder().setDateFormat("yyyy-MM-dd").create()
         val loggingInterceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
         val unauthorizedInterceptor = UnauthorizedInterceptor(unauthorizedChallenge)
@@ -28,7 +30,7 @@ class ServiceBuilder(private val baseUrl: String,
         val builder = Retrofit.Builder()
             .baseUrl(baseUrl)
             .client(okHttpBuilder.build())
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
         val retrofit = builder.build()
         return retrofit.create(serviceClass)
     }

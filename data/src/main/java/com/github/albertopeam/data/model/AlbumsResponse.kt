@@ -2,5 +2,4 @@ package com.github.albertopeam.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class TracksResponse(@SerializedName("tracks") val tracks: TrackResponse)
-
+data class AlbumsResponse(@SerializedName("items") val items: List<AlbumResponse>)

@@ -5,11 +5,17 @@ import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.github.albertopeam.domain.getOrThrow
+import com.github.albertopeam.domain.map
+import com.github.albertopeam.domain.models.Album
+import com.github.albertopeam.domain.models.Track
 import com.github.albertopeam.spoktify.app.di.DispatcherIO
 import com.github.albertopeam.spoktify.ui.items.model.ArtistItemViewModel
 import com.github.albertopeam.spoktify.ui.models.Event
 import com.github.albertopeam.usecases.artists.ArtistsRepository
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.zip
 import kotlinx.coroutines.launch
 
 class ArtistViewModel @ViewModelInject constructor(
@@ -32,6 +38,15 @@ class ArtistViewModel @ViewModelInject constructor(
 
     fun loadArtist(withId: String) {
         id = withId
+        loadArtist()
+        loadArtistData()
+    }
+
+    fun selected(type: Type) {
+        println(type.toString())
+    }
+
+    private fun loadArtist() {
         _loading.postValue(true)
         viewModelScope.launch(dispatcher) {
             try {
@@ -45,8 +60,13 @@ class ArtistViewModel @ViewModelInject constructor(
         }
     }
 
-    fun selected(type: Type) {
-        println(type.toString())
+    private fun loadArtistData() {
+        val albums: Flow<Result<List<Album>>> = flow {
+            val map: Map<String, Result<List<Any>>> = artistRepository.albums(id)
+                .map { mapOf(Pair("albums", it)) }
+        }
+        val topTracks: Flow<Result<List<Track>>> = flow { artistRepository.topTracks(id) }
+        val zip = albums.zip(topTracks)
     }
 
     enum class Type {
